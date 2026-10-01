@@ -1,0 +1,475 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Whole webpage */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #1e293b;
+
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Name in navbar */
+nav h2 {
+    color: #f8fafc;
+}
+.portfolio-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+}
+
+
+/* Navigation links */
+nav a {
+    text-decoration: none;
+    color: #cbd5e1;
+    margin-left: 20px;
+}
+
+
+/* Navigation link hover */
+nav a:hover {
+    color: #38bdf8;
+}
+
+
+/* Home section */
+#home {
+    min-height: 85vh;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Main heading */
+#home h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+
+/* Subtitle */
+#home h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+
+/* Home paragraph */
+#home p {
+    max-width: 650px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+}
+
+
+/* My Projects button */
+#home a {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 25px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
+/* Button hover */
+#home a:hover {
+    background-color: #7dd3fc;
+}
+#About {
+    padding: 80px 8%;
+    background-color: #1e293b;
+}
+#About h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+#About p {
+    max-width: 800px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+#skills {
+    padding: 80px 8%;
+    background-color: #0f172a;
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+#skills ul {
+    list-style: none;
+}
+
+#skills li {
+    background-color: #1e293b;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    max-width: 800px;
+    transition: 0.3s;
+}
+
+
+#skills li:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    #home {
+        padding: 80px 6%;
+    }
+
+    #About,
+    #skills {
+        padding: 60px 6%;
+    }
+}
+
+
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+#projects {
+    padding: 80px 8%;
+    background-color: #1e293b;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #38bdf8;
+}
+
+/* Project cards container */
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Individual project card */
+.project-card {
+    background-color: #0f172a;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Project title */
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #f8fafc;
+}
+
+/* Project description */
+.project-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+/* Project links */
+.project-card a {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 10px 18px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background-color: #7dd3fc;
+}
+
+
+/* =========================
+   PROJECTS - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #projects-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+#education {
+    padding: 80px 8%;
+    background-color: #0f172a;
+}
+
+#education h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #38bdf8;
+}
+
+/* Education card */
+.education-card {
+    background-color: #1e293b;
+    max-width: 800px;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.education-card h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.education-card p {
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   EDUCATION - MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #education {
+        padding: 60px 6%;
+    }
+
+    .education-card {
+        padding: 20px;
+    }
+
+}
+
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    padding: 80px 8%;
+    background-color: #1e293b;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+#contact > p {
+    margin-bottom: 30px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.contact-info {
+    background-color: #0f172a;
+    padding: 25px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #0f172a;
+    padding: 25px 8%;
+    text-align: center;
+    border-top: 1px solid #334155;
+}
+
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+
+    /* Home */
+    #home {
+        min-height: 80vh;
+        padding: 70px 6%;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+
+    /* About */
+    #About {
+        padding: 60px 6%;
+    }
+
+
+    /* Skills */
+    #skills {
+        padding: 60px 6%;
+    }
+
+
+    /* Projects */
+    #projects {
+        padding: 60px 6%;
+    }
+
+    #projects-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Education */
+    #education {
+        padding: 60px 6%;
+    }
+
+
+    /* Contact */
+    #contact {
+        padding: 60px 6%;
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 20px 6%;
+    }
+}
+
+
+
+/* js styleling */
+nav a.active {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
